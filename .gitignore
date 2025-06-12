@@ -1,0 +1,59 @@
+# MATLAB specific files
+*.mat
+*.fig
+*.p
+*.slx.autosave
+*.slxc
+*.mdl.autosave
+*.mdlp
+*.slx.original
+*.slx.r?????
+*.mdl.r?????
+
+# MATLAB temporary files
+*.asv
+*.autosave
+
+# Simulink cache files
+slprj/
+
+# MATLAB App Designer
+*.mlapp.bak
+
+# MATLAB Code Generation
+codegen/
+
+# MATLAB MEX files
+*.mex*
+
+# MATLAB installation files
+*.mlpkginstall
+*.mltbx
+
+# General files to ignore
+.DS_Store
+Thumbs.db
+
+# Backup files
+*~
+*.bak
+*.backup
+
+# Log files
+*.log
+
+# Large data files (customize as needed)
+*.xlsx
+*.csv
+*.txt
+*.dat
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+

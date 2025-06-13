@@ -40,7 +40,7 @@ end
 
 I = 2;     
 
-ds     = 0.05;         
+ds = 0.05;         
 
 x = linspace(-pi,pi,20);   
 y = x;   
@@ -81,7 +81,7 @@ m            = 9.109e-31;
 %random positions
 boxSize = 1.5;
 xy = -boxSize + 2*boxSize .* rand(numParticles, 2); 
-z  = -0.5 + 1.0 * rand(numParticles, 1);              
+z  = -0.5 + 1.0 * rand(numParticles, 1);    %-0.5 a 1          
 r0 = [xy, z];                                              
 
 %random velocities
@@ -93,8 +93,8 @@ posz = posx;
 
 for p = 1:numParticles
     r = r0(p,:);   
-    % v = v0(p,:);    random velocites
-    v = [0,1e4,0];
+    v = v0(p,:);    %random velocites
+    %v = [0,1e4,0];
     for k = 1:pasos
         [r,v] = rungakuta(r,v,dt,q,m, wire,dwire,sMin,sMax,I,ds);
         posx(p,k)=r(1);  posy(p,k)=r(2);  posz(p,k)=r(3);

@@ -5,7 +5,7 @@ dwireA  = @(s)[-sin(s), cos(s), 0];
 sA_min  = -pi;   sA_max = pi;
 
 wireB   = @(s)[s,  sin(s), 0];
-dwireB  = @(s)[1, cos(s), 0];
+dwireB  = @(s)[1, cos(s), 0];a
 sB_min  = -pi;   sB_max = pi;
 
 wireC   = @(s)[0, 0, s];
@@ -60,8 +60,10 @@ end
 
 % wire geometry for plotting (only for the chosen wire)
 sPlot = linspace(sMin, sMax, 100);
-rPlot = arrayfun(@(s) wire(s), sPlot, 'uni',0);
-rPlot = cat(1,rPlot{:});
+rPlot = zeros(numel(sPlot), 3);
+for k = 1:numel(sPlot)
+    rPlot(k, :) = wire(sPlot(k));
+end
 
 figure
 plot3(rPlot(:,1), rPlot(:,2), rPlot(:,3), 'k', 'LineWidth',2)
